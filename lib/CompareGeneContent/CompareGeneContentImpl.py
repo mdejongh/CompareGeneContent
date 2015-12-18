@@ -44,11 +44,9 @@ This sample module contains one small method - count_contigs.
                 for mrps in mrp['modelReactionProteinSubunits']:
                     for fr in mrps['feature_refs']:
                         model_genes.append(fr.split('/').pop())
-        from pprint import pprint
-        pprint(model_genes)
         matrix = wsClient.get_objects([{'ref': workspace_name+'/'+matrix_id}])[0]['data']
         matrix_genes = matrix['data']['row_ids']
-        both_genes = list(set(model_genes) & set(matrix_genes))
+        both_genes = sorted(list(set(model_genes) & set(matrix_genes)))
         returnVal = { 'gene_intersection': both_genes }
         #END compare_gene_content
 
