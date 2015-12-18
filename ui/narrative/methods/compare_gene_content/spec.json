@@ -13,14 +13,25 @@
 	},
 	"parameters": [ 
 		{
-			"id": "contigset_id",
+			"id": "model_id",
 			"optional": false,
 			"advanced": false,
 			"allow_multiple": false,
 			"default_values": [ "" ],
 			"field_type": "text",
 			"text_options": {
-				"valid_ws_types": ["KBaseGenomes.ContigSet"]
+				"valid_ws_types": ["KBaseFBA.FBAModel"]
+			}
+		},
+		{
+			"id": "matrix_id",
+			"optional": false,
+			"advanced": false,
+			"allow_multiple": false,
+			"default_values": [ "" ],
+			"field_type": "text",
+			"text_options": {
+				"valid_ws_types": ["KBaseFeatureValues.ExpressionMatrix"]
 			}
 		}
 	],
@@ -28,25 +39,33 @@
 		"service-mapping": {
 			"url": "",
 			"name": "CompareGeneContent",
-			"method": "count_contigs",
+			"method": "compare_gene_content",
 			"input_mapping": [
 				{
 					"narrative_system_variable": "workspace",
 					"target_argument_position": 0
 				},
 				{
-					"input_parameter": "contigset_id",
+					"input_parameter": "model_id",
 					"target_argument_position": 1
+				},
+				{
+					"input_parameter": "matrix_id",
+					"target_argument_position": 2
 				}
 			],
 			"output_mapping": [
 				{
-					"service_method_output_path": [0, "contig_count"],
-					"target_property": "contigCount"
+					"service_method_output_path": [0, "gene_intersection"],
+					"target_property": "geneIntersection"
 				},
 				{
-					"input_parameter": "contigset_id",
-					"target_property": "contigsetId"
+					"input_parameter": "model_id",
+					"target_property": "modelId"
+				},
+				{
+					"input_parameter": "matrix_id",
+					"target_property": "matrixId"
 				},
 				{
 					"narrative_system_variable": "workspace",

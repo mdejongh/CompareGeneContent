@@ -1,0 +1,46 @@
+#
+# define display information
+#
+name: Compare Gene Content
+tooltip: |
+	Compare the genes in an FBA Model with the genes in an Expression Matrix
+screenshots: []
+
+icon: icon.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+	apps:
+		related:
+			[]
+		next:
+			[]
+	methods:
+		related:
+			[]
+		next:
+			[annotate_contigset]
+
+#
+# Configure the display and description of parameters
+#
+parameters :
+    model_id :
+        ui-name : |
+            FBA Model
+        short-hint : |
+            The FBA Model to examine
+        long-hint  : |
+            The FBA Model for which you want to retrieve the genes
+    matrix_id :
+        ui-name : |
+            Expression Matrix
+        short-hint : |
+            The Expression Matrix to examine
+        long-hint  : |
+            The Expression Matrix for which you want to retrieve the genes
+
+description : |
+	<p>This method intersects the genes in an FBA Model with the genes in an Expression Matrix</p>
