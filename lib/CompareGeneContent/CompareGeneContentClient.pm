@@ -129,7 +129,9 @@ workspace_name is a string
 model_id is a string
 matrix_id is a string
 CompareGeneContentResults is a reference to a hash where the following keys are defined:
-	genes_in_common has a value which is a reference to a list where each element is a string
+	gene_intersection_count has a value which is an int
+	matrix_gene_count has a value which is an int
+	model_gene_count has a value which is an int
 
 </pre>
 
@@ -145,7 +147,9 @@ workspace_name is a string
 model_id is a string
 matrix_id is a string
 CompareGeneContentResults is a reference to a hash where the following keys are defined:
-	genes_in_common has a value which is a reference to a list where each element is a string
+	gene_intersection_count has a value which is an int
+	matrix_gene_count has a value which is an int
+	model_gene_count has a value which is an int
 
 
 =end text
@@ -369,7 +373,9 @@ a string
 
 <pre>
 a reference to a hash where the following keys are defined:
-genes_in_common has a value which is a reference to a list where each element is a string
+gene_intersection_count has a value which is an int
+matrix_gene_count has a value which is an int
+model_gene_count has a value which is an int
 
 </pre>
 
@@ -378,7 +384,9 @@ genes_in_common has a value which is a reference to a list where each element is
 =begin text
 
 a reference to a hash where the following keys are defined:
-genes_in_common has a value which is a reference to a list where each element is a string
+gene_intersection_count has a value which is an int
+matrix_gene_count has a value which is an int
+model_gene_count has a value which is an int
 
 
 =end text

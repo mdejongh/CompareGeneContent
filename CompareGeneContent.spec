@@ -20,7 +20,9 @@ module CompareGeneContent {
 	typedef string workspace_name;
 	
 	typedef structure {
-	    list<string> genes_in_common;
+	    int gene_intersection_count;
+	    int matrix_gene_count;
+	    int model_gene_count;
 	} CompareGeneContentResults;
 	
 	/*

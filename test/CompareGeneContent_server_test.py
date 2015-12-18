@@ -66,5 +66,5 @@ class CompareGeneContentTest(unittest.TestCase):
         self.getWsClient().save_objects({'workspace': self.getWsName(), 'objects':
             [{'type': 'KBaseFeatureValues.ExpressionMatrix', 'name': 'matrix.1', 'data': matrix}]})
         ret = self.getImpl().compare_gene_content(self.getContext(), self.getWsName(), 'model.1', 'matrix.1')
-        self.assertEqual(ret[0]['gene_intersection'][0],'RSP_0002')
+        self.assertEqual(ret[0]['gene_intersection_count'],1)
         return ret

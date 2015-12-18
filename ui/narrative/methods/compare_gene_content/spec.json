@@ -68,10 +68,6 @@
 					"target_property": "geneIntersectionCount"
 				},
 				{
-					"service_method_output_path": [0, "gene_intersection"],
-					"target_property": "geneIntersection"
-				},
-				{
 					"input_parameter": "model_id",
 					"target_property": "modelId"
 				},
