@@ -56,7 +56,19 @@
 			],
 			"output_mapping": [
 				{
-					"service_method_output_path": [0, "gene_intersection"],
+					"service_method_output_path": [0, "model_gene_count"],
+					"target_property": "modelGeneCount"
+				},
+				{
+					"service_method_output_path": [1, "matrix_gene_count"],
+					"target_property": "matrixGeneCount"
+				},
+				{
+					"service_method_output_path": [2, "gene_intersection_count"],
+					"target_property": "geneIntersectionCount"
+				},
+				{
+					"service_method_output_path": [3, "gene_intersection"],
 					"target_property": "geneIntersection"
 				},
 				{

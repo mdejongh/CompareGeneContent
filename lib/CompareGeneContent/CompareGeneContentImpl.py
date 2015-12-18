@@ -47,7 +47,7 @@ This sample module contains one small method - count_contigs.
         matrix = wsClient.get_objects([{'ref': workspace_name+'/'+matrix_id}])[0]['data']
         matrix_genes = matrix['data']['row_ids']
         both_genes = sorted(list(set(model_genes) & set(matrix_genes)))
-        returnVal = { 'gene_intersection': both_genes }
+        returnVal = { 'gene_intersection': both_genes, 'model_gene_count' : model_genes.len(), 'matrix_gene_count' : matrix_genes.len(), 'gene_intersection_count' : both_genes.len() }
         #END compare_gene_content
 
         # At some point might do deeper type checking...
